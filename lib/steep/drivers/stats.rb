@@ -129,6 +129,7 @@ module Steep
           steepfile: project.steepfile_path,
           delay_shutdown: true,
           args: command_line_patterns,
+          steep_path: steep_path.to_s,
           count: jobs_count
         )
 

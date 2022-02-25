@@ -72,6 +72,11 @@ module Steep
       opts.on("-j N", "--jobs=N", "Specify the number of type check workers (defaults: #{default})") do |count|
         command.jobs_count = Integer(count) if Integer(count) > 0
       end
+
+      command.steep_path = Pathname("steep")
+      opts.on("--steep-path=PATH", "Specify path of Steep CLI for worker (defaults: steep") do |path|
+        command.steep_path = Pathname(path)
+      end
     end
 
     def process_init
