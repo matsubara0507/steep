@@ -262,7 +262,7 @@ module Steep
           Steep.measure "typecheck" do
             signature_service = signature_services.fetch(target.name)
             subtyping = signature_service.current_subtyping
-            p [path, subtyping]
+            p [path, subtyping, signature_service.status]
 
             if subtyping
               text = source_files.fetch(path).content
