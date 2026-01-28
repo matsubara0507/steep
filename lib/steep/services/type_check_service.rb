@@ -233,7 +233,6 @@ module Steep
           Steep.measure "typecheck" do
             signature_service = signature_services.fetch(target.name)
             subtyping = signature_service.current_subtyping
-            p [path, subtyping]
             p [path, signature_service.status.diagnostics] if subtyping.nil?
 
             if subtyping
